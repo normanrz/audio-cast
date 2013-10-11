@@ -1,0 +1,16 @@
+{
+  "name": "audio-cast",
+  "version": "0.0.1",
+  "dependencies": {
+    "fs" : "0",
+    "http" : "0",
+    "express": "2.5.x",
+    "connect":"2.7.1",
+    "ejs" : "0.8.3",
+    "jade" : "0.27.7" 
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}

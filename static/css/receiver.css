@@ -1,0 +1,16 @@
+body {
+	font: 16px OpenSans;
+}
+.messages {
+	position: fixed;
+	margin-top: -15px;
+	left: 0;
+	top: 50%;
+	height: 100%;
+	width: 100%;
+}
+.messages h1 {
+	line-height: 1em;
+	font-size: 30px;
+	text-align: center;
+}
