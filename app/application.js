@@ -30,7 +30,6 @@ app.configure(function(){
 
     // views
     app.set('view engine', 'ejs');
-    app.register('.html', require('jade'));
     app.set('view options', { layout: false });
 
 });

@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "2.5.x",
-    "connect":"2.7.1",
-    "ejs" : "0.8.3"
+    "connect": "2.7.1",
+    "ejs": "0.8.3",
+    "async": "~0.2.9"
   },
   "engines": {
     "node": "0.8.x",

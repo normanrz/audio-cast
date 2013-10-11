@@ -1,6 +1,5 @@
 var fs = require('fs'),
-	async = require('async'),
-	_ = require('underscore');
+	async = require('async');
 
 // APP
 module.exports = (function(){
@@ -8,7 +7,7 @@ module.exports = (function(){
 
 	render.map = function(values, innerFunction, callback) {
 	    var output = [];
-	    var queue = _.map(values, function(value){
+	    var queue = values.map(function(value){
 	    	return function(next){
 	        	//console.log('remember to call next()', value);
 	        	innerFunction(value, output, next);	            

@@ -4,10 +4,6 @@ global.DIR = process.env.PWD || __dirname;
 global.PORT = process.env.PORT || 5000;
 
 
-/* Librarian */
-
-var _ = require('underscore');
-
 /* Application */
 
 var app = require("./app/application.js");
