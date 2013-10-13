@@ -3,7 +3,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/receiver.css" />
 <body class="initial">
 	<div class="messages">
-		<h1>Waiting for Messages...</h1>
+		<h1 class="pulse">Waiting for Messages...</h1>
 	</div>
 </body>
 
@@ -13,7 +13,7 @@
 	$(function() {
 		var receiver = new cast.receiver.Receiver("8a31e3e4-0fe4-4eaf-95b1-d63305426c12", ['audio-cast']),
 			channelHandler = new cast.receiver.ChannelHandler('audio-cast'),
-			$messages = $('.messages'),
+			$messages = $('.messages h1'),
 			$body = $('body');
 
 		channelHandler.addChannelFactory(
@@ -24,6 +24,7 @@
 		channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, onMessage.bind(this));
 
 		function onMessage(event) {
+			$messages.removeClass("pulse");
 			$messages.html(event.message.type);
 		}
 	});

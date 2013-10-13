@@ -1,9 +1,16 @@
+@-webkit-keyframes pulse {
+	50% {
+		-webkit-transform: scale(1.2);
+		color: #999;
+	}
+}
 body {
 	font: 16px OpenSans;
+	background: white;
 }
 .messages {
 	position: fixed;
-	margin-top: -15px;
+	margin-top: -30px;
 	left: 0;
 	top: 50%;
 	height: 100%;
@@ -11,6 +18,10 @@ body {
 }
 .messages h1 {
 	line-height: 1em;
-	font-size: 30px;
+	font-size: 60px;
 	text-align: center;
+	margin: 0;
+}
+.messages h1.pulse {
+	-webkit-animation: pulse 3s infinite;
 }
