@@ -11,13 +11,13 @@
 <script src="https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js"></script>
 <script>
 	$(function() {
-		var receiver = new cast.receiver.Receiver('*** YOUR APP ID ****', ['*** YOUR NAMESPACE ***']),
-			channelHandler = new cast.receiver.ChannelHandler('*** YOUR NAMESPACE ***'),
+		var receiver = new cast.receiver.Receiver("8a31e3e4-0fe4-4eaf-95b1-d63305426c12", ['audio-cast']),
+			channelHandler = new cast.receiver.ChannelHandler('audio-cast'),
 			$messages = $('.messages'),
 			$body = $('body');
 
 		channelHandler.addChannelFactory(
-			receiver.createChannelFactory('*** YOUR NAMESPACE ***'));
+			receiver.createChannelFactory('audio-cast'));
 
 		receiver.start();
 

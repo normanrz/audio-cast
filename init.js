@@ -15,6 +15,10 @@ app.get("/receiver", function(req, res, next) {
   res.render(__dirname + "/views/receiver.ejs");
 });
 
+app.get("/sender", function(req, res, next) {
+  res.render(__dirname + "/views/sender.ejs");
+});
+
 
 /* Leader */
 app.listen(global.PORT, function() {
