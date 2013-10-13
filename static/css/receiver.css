@@ -1,12 +1,13 @@
 @-webkit-keyframes pulse {
 	50% {
 		-webkit-transform: scale(1.2);
-		color: #999;
+		color: #aaa;
 	}
 }
 body {
 	font: 16px OpenSans;
-	background: white;
+	background: #333D4D;
+	color: #fff;
 }
 .messages {
 	position: fixed;
