@@ -33,7 +33,7 @@
 		initializeApi = function() {
 			if (!cast_api) {
 				cast_api = new cast.Api();
-				cast_api.addReceiverListener('8a31e3e4-0fe4-4eaf-95b1-d63305426c12', onReceiverList);
+				cast_api.addReceiverListener("<%= appKey %>", onReceiverList);
 			}
 		};
 
@@ -62,7 +62,7 @@
 
 		doLaunch = function(receiver) {
 			if (!cv_activity) {
-				var request = new cast.LaunchRequest('8a31e3e4-0fe4-4eaf-95b1-d63305426c12', receiver);
+				var request = new cast.LaunchRequest("<%= appKey %>", receiver);
 
 				$killSwitch.prop('disabled', false);
 
@@ -74,7 +74,11 @@
 			if (activity.status === 'running') {
 				cv_activity = activity;
 
-				cast_api.sendMessage(cv_activity.activityId, 'audio-cast', { type: 'HelloWorld' });
+				$.ajax({ 
+					url : "http://localhost:5553/ip"
+				}).done(function (ip) {
+					cast_api.sendMessage(cv_activity.activityId, 'audio-cast', { url : "http://" + ip + "/stream.mp3" });
+				})
 			}
 		};
 
