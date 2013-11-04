@@ -12,6 +12,7 @@ pids
 logs
 results
 node_modules
+spotify-server/spotify_key
 
 npm-debug.log
 
